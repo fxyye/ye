@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{msg}}<br>
+			请输入内容：<input v-model="msg" /><br>
+			
+		</div>
+		<script type="text/javascript">
+			var a = new Vue({
+				el:'#app',
+				data:{
+					msg:''
+				}
+				
+			})
+			
+		</script>
+	</body>
+</html>
