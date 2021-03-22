@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<body>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<li id="app">今天的日期是：{{msg}}</li>
+		<script type="text/javascript">
+			var a = new Vue({
+				el:'#app',
+				data(){
+					return{
+						msg:'3月15日'
+					}
+				}
+				
+			})
+			
+		</script>
+	</body>
+</html>
