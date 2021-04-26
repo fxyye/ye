@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="app">
+			
+			<img src="img/zhaocha.jpg" @click="show()">
+			<p style="font-size: 14px;color: lightcoral;">ps:请在左图中进行点击。</p>
+			您已正确选中{{number}}处
+			
+		</div>
+		
+		<script type="text/javascript">
+			var a = new Vue({
+				el:'#app',
+				data:{
+					number:0
+				},
+				methods:{
+					show(){
+						console.log(event.clientX+","+event.clientY)
+						if(event.clientX>360&&event.clientX<400&&event.clientY>568&&event.clientY<600){
+							a.number++;  //蜜蜂
+						}else if(event.clientX>112&&event.clientX<133&&event.clientY>535&&event.clientY<568){
+							a.number++; //狐狸
+						}else if(event.clientX>233&&event.clientX<245&&event.clientY>417&&event.clientY<446){
+							a.number++;  // 牛角
+						}else if(event.clientX>265&&event.clientX<300&&event.clientY>240&&event.clientY<264){
+							a.number++;//白云
+						}else if(event.clientX>440&&event.clientX<480&&event.clientY>337&&event.clientY<375){
+							a.number++;//花苞
+						}
+						if(a.number==5){
+							alert("恭喜你！游戏过关！！！");
+						}
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>
